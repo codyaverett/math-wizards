@@ -1,10 +1,16 @@
 import { Head } from "$fresh/runtime.ts";
+import AdSense from "../components/AdSense.tsx";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Maths Wizards - Level Up Your Math Skills</title>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        >
+        </script>
       </Head>
       <main class="container">
         <header>
@@ -55,6 +61,9 @@ export default function Home() {
             </article>
           </div>
         </section>
+
+        {/* Ad placement between features and CTA */}
+        <AdSense slot="1234567890" format="auto" />
 
         <section class="cta">
           <h2>Start Learning Today</h2>
