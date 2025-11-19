@@ -3,10 +3,12 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $api_code_execute from "./routes/api/code/execute.ts";
 import * as $api_email_subscribe from "./routes/api/email/subscribe.ts";
 import * as $api_lessons_check_answer from "./routes/api/lessons/check-answer.ts";
 import * as $api_lessons_hint from "./routes/api/lessons/hint.ts";
 import * as $api_lessons_sections from "./routes/api/lessons/sections.ts";
+import * as $api_quiz_id_submit from "./routes/api/quiz/[id]/submit.ts";
 import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $blog_index from "./routes/blog/index.tsx";
 import * as $faq from "./routes/faq.tsx";
@@ -14,16 +16,20 @@ import * as $index from "./routes/index.tsx";
 import * as $lessons_category_ from "./routes/lessons/[category].tsx";
 import * as $lessons_category_slug_ from "./routes/lessons/[category]/[slug].tsx";
 import * as $lessons_index from "./routes/lessons/index.tsx";
-
+import * as $playground from "./routes/playground.tsx";
+import * as $CodeEditor from "./islands/CodeEditor.tsx";
+import * as $Quiz from "./islands/Quiz.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
+    "./routes/api/code/execute.ts": $api_code_execute,
     "./routes/api/email/subscribe.ts": $api_email_subscribe,
     "./routes/api/lessons/check-answer.ts": $api_lessons_check_answer,
     "./routes/api/lessons/hint.ts": $api_lessons_hint,
     "./routes/api/lessons/sections.ts": $api_lessons_sections,
+    "./routes/api/quiz/[id]/submit.ts": $api_quiz_id_submit,
     "./routes/blog/[slug].tsx": $blog_slug_,
     "./routes/blog/index.tsx": $blog_index,
     "./routes/faq.tsx": $faq,
@@ -31,8 +37,12 @@ const manifest = {
     "./routes/lessons/[category].tsx": $lessons_category_,
     "./routes/lessons/[category]/[slug].tsx": $lessons_category_slug_,
     "./routes/lessons/index.tsx": $lessons_index,
+    "./routes/playground.tsx": $playground,
   },
-  islands: {},
+  islands: {
+    "./islands/CodeEditor.tsx": $CodeEditor,
+    "./islands/Quiz.tsx": $Quiz,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
