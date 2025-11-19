@@ -1,0 +1,2 @@
+- After completing a feature or major milestones generate a commit message for the work done and wait for me to commit the changes to the git repo.
+- After completing a feature or major milestone document steps taken and issues overcome in a docs/ file
