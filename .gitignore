@@ -1,0 +1,39 @@
+# Deno
+.deno/
+deno.lock
+
+# Fresh build
+_fresh/
+
+# Environment
+.env
+.env.local
+
+# Database
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build outputs
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
