@@ -7,9 +7,12 @@ import * as $api_email_subscribe from "./routes/api/email/subscribe.ts";
 import * as $api_lessons_check_answer from "./routes/api/lessons/check-answer.ts";
 import * as $api_lessons_hint from "./routes/api/lessons/hint.ts";
 import * as $api_lessons_sections from "./routes/api/lessons/sections.ts";
+import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $blog_index from "./routes/blog/index.tsx";
 import * as $faq from "./routes/faq.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $lessons_category_ from "./routes/lessons/[category].tsx";
+import * as $lessons_category_slug_ from "./routes/lessons/[category]/[slug].tsx";
 import * as $lessons_index from "./routes/lessons/index.tsx";
 
 import type { Manifest } from "$fresh/server.ts";
@@ -21,9 +24,12 @@ const manifest = {
     "./routes/api/lessons/check-answer.ts": $api_lessons_check_answer,
     "./routes/api/lessons/hint.ts": $api_lessons_hint,
     "./routes/api/lessons/sections.ts": $api_lessons_sections,
+    "./routes/blog/[slug].tsx": $blog_slug_,
     "./routes/blog/index.tsx": $blog_index,
     "./routes/faq.tsx": $faq,
     "./routes/index.tsx": $index,
+    "./routes/lessons/[category].tsx": $lessons_category_,
+    "./routes/lessons/[category]/[slug].tsx": $lessons_category_slug_,
     "./routes/lessons/index.tsx": $lessons_index,
   },
   islands: {},
