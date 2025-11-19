@@ -3,14 +3,28 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $api_email_subscribe from "./routes/api/email/subscribe.ts";
+import * as $api_lessons_check_answer from "./routes/api/lessons/check-answer.ts";
+import * as $api_lessons_hint from "./routes/api/lessons/hint.ts";
+import * as $api_lessons_sections from "./routes/api/lessons/sections.ts";
+import * as $blog_index from "./routes/blog/index.tsx";
+import * as $faq from "./routes/faq.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $lessons_index from "./routes/lessons/index.tsx";
 
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
+    "./routes/api/email/subscribe.ts": $api_email_subscribe,
+    "./routes/api/lessons/check-answer.ts": $api_lessons_check_answer,
+    "./routes/api/lessons/hint.ts": $api_lessons_hint,
+    "./routes/api/lessons/sections.ts": $api_lessons_sections,
+    "./routes/blog/index.tsx": $blog_index,
+    "./routes/faq.tsx": $faq,
     "./routes/index.tsx": $index,
+    "./routes/lessons/index.tsx": $lessons_index,
   },
   islands: {},
   baseUrl: import.meta.url,
