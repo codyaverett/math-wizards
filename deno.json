@@ -1,6 +1,6 @@
 {
   "name": "@maths-wizards/app",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "lock": false,
   "tasks": {
     "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",

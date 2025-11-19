@@ -1,14 +1,17 @@
 # Deployment Guide
 
-## Docker Deployment
+This guide covers deploying Maths Wizards to production using Docker, as well as alternative deployment options.
+
+## Quick Start with Docker
 
 ### Prerequisites
 
-- Docker installed
-- Docker Compose installed
-- Domain name (optional, for production)
+- Docker installed ([Get Docker](https://docs.docker.com/get-docker/))
+- Docker Compose installed ([Install Compose](https://docs.docker.com/compose/install/))
+- 1GB+ RAM, 10GB+ disk space
+- Domain name (optional, recommended for production)
 
-### Quick Start
+### 5-Minute Deployment
 
 1. **Clone the repository**
    ```bash
@@ -16,21 +19,29 @@
    cd maths-wizards
    ```
 
-2. **Set up environment variables**
+2. **Configure environment** (optional)
    ```bash
    cp .env.example .env
-   # Edit .env with your configuration
+   # Edit .env if you want to customize settings
+   # nano .env
    ```
 
-3. **Build and run**
+3. **Build and launch**
    ```bash
    docker-compose up -d
    ```
 
-4. **Access the site**
+4. **Verify deployment**
+   ```bash
+   docker-compose ps
+   docker-compose logs -f web
    ```
-   http://localhost:8000
-   ```
+
+5. **Access the site**
+   - Local: `http://localhost:8000`
+   - Production: `http://your-domain.com`
+
+**That's it!** Your Maths Wizards instance is now running.
 
 ## Dockerfile
 
